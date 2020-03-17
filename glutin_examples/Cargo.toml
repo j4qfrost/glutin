@@ -12,7 +12,7 @@ publish = false
 
 [dependencies]
 glutin = { path = "../glutin" }
-winit = "0.20.0"
+winit = { git = "https://github.com/amethyst/winit.git", branch = "clone-events" }
 takeable-option = "0.4"
 image = "0.21"
 
