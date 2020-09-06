@@ -1,6 +1,6 @@
 [package]
 name = "glutin"
-version = "0.24.0"
+version = "0.24.1"
 authors = ["The glutin contributors", "Pierre Krieger <pierre.krieger1708@gmail.com>"]
 description = "Cross-platform OpenGL context provider."
 keywords = ["windowing", "opengl"]
@@ -34,9 +34,9 @@ glutin_gles2_sys = { version = "0.1.4", path = "../glutin_gles2_sys" }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 cgl = "0.3"
-cocoa = "0.19"
-core-foundation = "0.6"
-core-graphics = "0.17"
+cocoa = "0.20"
+core-foundation = "0.7"
+core-graphics = "0.19"
 
 [target.'cfg(target_os = "windows")'.dependencies.winapi]
 version = "0.3"
@@ -48,15 +48,16 @@ features = [
 ]
 
 [target.'cfg(target_os = "windows")'.dependencies]
-libloading = "0.5"
+libloading = "0.6.1"
 glutin_wgl_sys = { version = "0.1.4", path = "../glutin_wgl_sys" }
 glutin_egl_sys = { version = "0.1.4", path = "../glutin_egl_sys" }
 parking_lot = "0.10"
 
 [target.'cfg(any(target_os = "linux", target_os = "freebsd", target_os = "dragonfly", target_os = "netbsd", target_os = "openbsd"))'.dependencies]
 osmesa-sys = "0.1"
-wayland-client = { version = "0.23", features = ["egl", "dlopen"] }
-libloading = "0.5"
+wayland-client = { version = "0.27", features = ["dlopen"] }
+wayland-egl = "0.27"
+libloading = "0.6.1"
 glutin_egl_sys = { version = "0.1.4", path = "../glutin_egl_sys" }
 glutin_glx_sys = { version = "0.1.6", path = "../glutin_glx_sys" }
 parking_lot = "0.10"
