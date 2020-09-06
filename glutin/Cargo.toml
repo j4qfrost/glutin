@@ -18,7 +18,7 @@ serde = ["winit/serde"]
 
 [dependencies]
 lazy_static = "1.3"
-winit = { version = "0.22.0", git = "https://github.com/amethyst/winit.git", branch = "wasm" }
+winit = { version = "0.22.2", git = "https://github.com/j4qfrost/winit.git", branch = "wasm"}
 
 [target.'cfg(target_os = "android")'.dependencies]
 android_glue = "0.2"
